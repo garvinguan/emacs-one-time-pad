@@ -1,4 +1,4 @@
-;;; one-time-pad-encrypt.el --- One time pad encryption within file for GNU Emacs
+;;; one-time-pad-encrypt.el --- One time pad encryption within file
 
 ;; Copyright (C) 2016 Garvin Guan
 ;;
@@ -24,6 +24,7 @@
 
 ;;; Code:
 
+;;;###autoload
 (defun one-time-pad-encrypt (key start end)
   "Encrypt text within a file, your key should be as long or longer than the marked text"
   (interactive
