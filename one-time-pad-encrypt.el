@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(defun one-time-pad-encrypt-string (key start end)
+(defun one-time-pad-encrypt (key start end)
   "Encrypt text within a file, your key should be as long or longer than the marked text"
   (interactive
    (list (read-string "Key to use for encryption: ")
@@ -43,5 +43,5 @@
     (delete-region start end)
     (insert-string (concat (reverse result)))))
 
-(provide 'one-time-pad-encrypt-string)
+(provide 'one-time-pad-encrypt)
 ;;; one-time-pad-encrypt.el ends here
