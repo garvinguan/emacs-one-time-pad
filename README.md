@@ -17,3 +17,14 @@ A convenient encryption using one-time-pad, great for short strings within files
 * Run command M-x one-time-pad-encrypt-string or with your shortcut
 * Enter the encryption key used to originally encrypt the text
 * The marked text should now be decrypted!
+
+# One Time Pad Encryption Details
+This type is encryption is extremely secure (though inefficient in space) if several rules are followed
+* Never reuse the same key for other data
+
+Keys should be as different as possible from other keys also used with this encryption
+
+* The key should be random (should contain as few repeated sequences as possible)
+
+More details can be seen here
+https://en.wikipedia.org/wiki/One-time_pad
