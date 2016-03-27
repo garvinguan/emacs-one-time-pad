@@ -1,4 +1,4 @@
-# emacs-one-time-pad
+# One-time-pad encryption for Emacs
 A convenient encryption using one-time-pad, great for short strings within files
 
 # Getting Started
