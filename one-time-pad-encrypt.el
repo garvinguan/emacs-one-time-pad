@@ -1,4 +1,4 @@
-;;; one-time-pad-encrypt-string.el ---
+;;; one-time-pad-encrypt.el --- One time pad encryption within file for GNU Emacs
 
 ;; Copyright (C) 2016 Garvin Guan
 ;;
@@ -30,15 +30,18 @@
    (list (read-string "Key to use for encryption: ")
 	 (region-beginning)(region-end)))
   (let* ((data (buffer-substring start end))
-	(dataAsList (string-to-list data))
-	(keyAsList (string-to-list key))
+	(data-as-list (string-to-list data))
+	(key-as-list (string-to-list key))
 	(result))
     (barf-if-buffer-read-only)
-    (if (< (length keyAsList) (length dataAsList))
+    (if (< (length key-as-list) (length data-as-list))
 	(error "The key must be as long or longer in length than the data"))
-    (while dataAsList
-      (setq result (cons (logxor (car dataAsList) (car keyAsList)) result))
-      (setq dataAsList (cdr dataAsList))
-      (setq keyAsList (cdr keyAsList)))
+    (while data-as-list
+      (setq result (cons (logxor (car data-as-list) (car key-as-list)) result))
+      (setq data-as-list (cdr data-as-list))
+      (setq key-as-list (cdr key-as-list)))
     (delete-region start end)
     (insert-string (concat (reverse result)))))
+
+(provide 'one-time-pad-encrypt-string)
+;;; one-time-pad-encrypt.el ends here
