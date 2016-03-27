@@ -11,12 +11,14 @@ A convenient encryption using one-time-pad, great for short strings within files
 * Run command M-x one-time-pad-encrypt or with your shortcut
 * Enter a string to be used as the encryption key (The length of the string should be as long if not longer than the marked text)
 * The marked text should now be encrypted!
+![encryption](http://i.imgur.com/1QxmJNe.gif)
 
 # How to decrypt
 * Mark the encrypted text
 * Run command M-x one-time-pad-encrypt or with your shortcut
 * Enter the encryption key used to originally encrypt the text
 * The marked text should now be decrypted!
+![decryption](http://i.imgur.com/j0VwKTa.gif)
 
 # One Time Pad Encryption Details
 This type is encryption is extremely secure (though inefficient in space) if several rules are followed
