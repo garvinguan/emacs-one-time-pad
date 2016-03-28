@@ -10,6 +10,7 @@ A convenient encryption using one-time-pad, great for short strings within files
 * Mark text that should be encrypted
 * Run command M-x one-time-pad-encrypt or with your shortcut
 * Enter a string to be used as the encryption key (The length of the string should be as long if not longer than the marked text)
+
 ![encryption](http://i.imgur.com/1QxmJNe.gif)
 * The marked text should now be encrypted!
 
@@ -17,6 +18,7 @@ A convenient encryption using one-time-pad, great for short strings within files
 * Mark the encrypted text
 * Run command M-x one-time-pad-encrypt or with your shortcut
 * Enter the encryption key used to originally encrypt the text
+
 ![decryption](http://i.imgur.com/j0VwKTa.gif)
 * The marked text should now be decrypted!
 
