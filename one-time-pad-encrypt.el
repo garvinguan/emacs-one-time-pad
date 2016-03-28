@@ -4,7 +4,6 @@
 ;;
 ;; Author: Garvin Guan <garvin.guan@gmail.com>
 ;; URL: https://github.com/garvinguan/emacs-one-time-pad/
-;; Package-Requires: None
 ;; Version: 1.0
 ;; Keywords: convenience
 
