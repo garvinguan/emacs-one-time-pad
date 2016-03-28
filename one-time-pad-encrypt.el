@@ -41,7 +41,7 @@
       (setq data-as-list (cdr data-as-list))
       (setq key-as-list (cdr key-as-list)))
     (delete-region start end)
-    (insert-string (concat (reverse result)))))
+    (insert (concat (reverse result)))))
 
 (provide 'one-time-pad-encrypt)
 ;;; one-time-pad-encrypt.el ends here
