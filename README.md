@@ -23,7 +23,7 @@ A convenient encryption using one-time-pad, great for short strings within files
 * The marked text should now be decrypted!
 
 # One Time Pad Encryption Details
-This type is encryption is extremely secure (though inefficient in space) if several rules are followed
+This type of encryption is extremely secure (though inefficient in space) if several rules are followed
 * Never reuse the same key for other data
 
 Keys should be as different as possible from other keys also used with this encryption
