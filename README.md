@@ -6,6 +6,8 @@ A convenient encryption using one-time-pad, great for short strings within files
 
         (global-set-key (kbd "C-x") 'one-time-pad-encrypt)
 
+* Use M-x one-time-pad-encrypt-hide-key to enter your key like a password (if you don't want people to see what you type)
+
 # How to encrypt
 * Mark text that should be encrypted
 * Run command M-x one-time-pad-encrypt or with your shortcut
