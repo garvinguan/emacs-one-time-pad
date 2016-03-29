@@ -27,7 +27,7 @@
 (defun one-time-pad-encrypt (key start end)
   "Encrypt text within a file, your key should be as long or longer than the marked text"
   (interactive
-   (list (read-string "Key to use for encryption: ")
+   (list (read-passwd "Key to use for encryption: ")
 	 (region-beginning)(region-end)))
   (let* ((data (buffer-substring start end))
 	(data-as-list (string-to-list data))
