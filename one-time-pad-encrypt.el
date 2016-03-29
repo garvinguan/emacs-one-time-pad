@@ -29,19 +29,7 @@
   (interactive
    (list (let ((minibuffer-history minibuffer-history)) (read-string "Key to use: "))
 	 (region-beginning)(region-end)))
-  (let* ((data (buffer-substring start end))
-	(data-as-list (string-to-list data))
-	(key-as-list (string-to-list key))
-	(result))
-    (barf-if-buffer-read-only)
-    (if (< (length key-as-list) (length data-as-list))
-	(error "The key must be as long or longer in length than the data"))
-    (while data-as-list
-      (setq result (cons (logxor (car data-as-list) (car key-as-list)) result))
-      (setq data-as-list (cdr data-as-list))
-      (setq key-as-list (cdr key-as-list)))
-    (delete-region start end)
-    (insert (concat (reverse result)))))
+  (one-time-pad--encrypt key start end))
 
 ;;;###autoload
 (defun one-time-pad-encrypt-hide-key (key start end)
@@ -49,6 +37,11 @@
   (interactive
    (list (read-passwd "Key to use for encryption: ")
 	 (region-beginning)(region-end)))
+  (one-time-pad--encrypt key start end))
+
+;;;###autoload
+(defun one-time-pad--encrypt (key start end)
+  "Xor key with data"
   (let* ((data (buffer-substring start end))
 	(data-as-list (string-to-list data))
 	(key-as-list (string-to-list key))
